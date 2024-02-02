@@ -1,0 +1,1 @@
+ Uma ToDo List utilizando Django e diversos recursos importantes desse framework, recursos como sistema de rotas, template, models, Class Based View, também utilizei a metodologia CRUD para melhorar o código.
