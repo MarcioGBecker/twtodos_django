@@ -2,7 +2,8 @@ from datetime import date
 
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, View
 from django.urls import reverse_lazy
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
+from django.http import HttpResponse
 
 from .models import Todo
 
@@ -28,3 +29,6 @@ class TodoCompleteView(View):
         todo = get_object_or_404(Todo, pk=pk)
         todo.mark_has_complete()
         return redirect("todo_list")
+
+def todo_list(request):
+    return render(request, "todo_list")
